@@ -4,30 +4,34 @@ A simple TclOO basic Class scaffolding procedure. For when you need dead-simple 
 Inspired by the Object::Tiny module in the Perl world.
 
 
-# USAGE and TESTING
-source tinyclass.tcl
+USAGE and TESTING
 
-# define a named class, and provide some attribute names.
-# Usage: tinyclass ClassName ?attributes...?
-tinyclass Widget model color
+  tclsh> source tinyclass.tcl
 
-# create a new Widget object, with Tcl-ish attributes
-set o [Widget new -model 13A -color blue]
-::oo::Obj12
+Define a named class, and provide some attribute names.
+Usage: tinyclass ClassName ?attributes...?
 
-# what happens when invalid attributes are specified?
-Widget new -shape cylinder
-invalid attribute '-shape'
-object deleted in constructor
+  tclsh> tinyclass Widget model color
 
-# check if attributes were set properly at build time
-puts $::oo::Obj12::model
+Create a new Widget object, with Tcl-ish attributes
+
+  tclsh> set o [Widget new -model 13A -color blue]
+  ::oo::Obj12
+
+What happens when invalid attributes are specified?
+
+  tclsh> Widget new -shape cylinder
+  invalid attribute '-shape'
+  object deleted in constructor
+
+Check if attributes were set properly at build time
+  tclsh> puts $::oo::Obj12::model
 13A
 
-# use our attribute SET method
-puts [$o model 14A]
-14A
+Use our attribute SET method
+  tclsh> puts [$o model 14A]
+  14A
 
-# use our attribute GET method
-puts [$o model]
-14A
+Use our attribute GET method
+  tclsh> puts [$o model]
+  14A
