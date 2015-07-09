@@ -8,49 +8,49 @@ Tcl 8.6
 
 # USAGE and TESTING
 
-<code>
+<pre>
   source tinyclass.tcl
-</code>
+</pre>
 
 # Define a named class, and provide some attribute names.
 <i>Usage: tinyclass ClassName ?attributes...?</i>
 
-<code>
+<pre>
   tinyclass Widget model color
-</code>
+</pre>
 
 # Create a new Widget object, with Tcl-ish attributes.
 
-<code>
+<pre>
   set o [Widget new -model 13A -color blue]
   ::oo::Obj12
-</code>
+</pre>
 
 # What happens when invalid attributes are specified?
 
-<code>
+<pre>
   Widget new -shape cylinder
   invalid attribute '-shape'
   object deleted in constructor
-</code>
+</pre>
 
 # Check if attributes were set properly at build time
 
-<code>
+<pre>
   puts $::oo::Obj12::model
   13A
-</code>
+</pre>
 
 # Use our attribute SET method
 
-<code>
+<pre>
   puts [$o model 14A]
   14A
-</code>
+</pre>
 
 # Use our attribute GET method
 
-<code>
+<pre>
   puts [$o model]
   14A
-</code>
+</pre>
