@@ -1,4 +1,4 @@
-# Tcl-TinyOO
+# Tcl TinyClass
 A simple TclOO basic Class scaffolding procedure. For when you need dead-simple classes with basic attributes, and don't want to build any Methods. Saves a lot of typing!
 
 Inspired by the Object::Tiny module in the Perl world.
